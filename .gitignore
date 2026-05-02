@@ -1,0 +1,19 @@
+# Generated data
+data/
+reports/
+logs/
+releases/
+dist/
+
+# SQLite sidecar files
+*.db
+*.db-wal
+*.db-shm
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# OS/editor files
+.DS_Store
+._*
