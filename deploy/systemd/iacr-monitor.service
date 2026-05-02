@@ -1,0 +1,9 @@
+[Unit]
+Description=IACR ePrint daily metadata monitor
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/ubuntu/projects/iacr-monitor
+ExecStart=/usr/bin/python3 /home/ubuntu/projects/iacr-monitor/scripts/poll_daily.py
