@@ -1,0 +1,11 @@
+[Unit]
+Description=Run IACR ePrint monitor daily
+
+[Timer]
+# 01:10 UTC is 09:10 Asia/Shanghai.
+OnCalendar=*-*-* 01:10:00
+Persistent=true
+Unit=iacr-monitor.service
+
+[Install]
+WantedBy=timers.target
