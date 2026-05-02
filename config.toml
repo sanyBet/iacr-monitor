@@ -1,0 +1,32 @@
+[paths]
+db = "data/iacr.db"
+raw_oai = "data/raw/oai"
+raw_rss = "data/raw/rss"
+reports = "reports/daily"
+pdfs = "data/pdfs"
+
+[http]
+user_agent = "iacr-monitor/0.1 (+r205 local metadata monitor; contact not configured)"
+from_email = ""
+timeout_seconds = 45
+retries = 3
+delay_seconds = [1.0, 2.5]
+
+[oai]
+base_url = "https://eprint.iacr.org/oai"
+metadata_prefix = "oai_dc"
+incremental_overlap_hours = 48
+
+[rss]
+url = "https://eprint.iacr.org/rss/rss.xml?order=recent"
+
+[daily]
+timezone = "Asia/Shanghai"
+
+[pdf]
+enabled = false
+mode = "new-only"
+max_per_run = 10
+respect_robots = true
+robots_url = "https://eprint.iacr.org/robots.txt"
+stop_on_robots_block = true
